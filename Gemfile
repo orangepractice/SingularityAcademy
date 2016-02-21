@@ -29,6 +29,8 @@ gem 'paperclip', '~> 4.3'
 gem 'redcarpet', '~> 3.2.3'
 gem 'coderay', '~> 1.1'
 
+gem 'friendly_id', '~> 5.1'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
