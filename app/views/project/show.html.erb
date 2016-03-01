@@ -49,7 +49,8 @@
       </div>
       <div class="card-content grey-text text-darken-4">
         <h5><%= @project.name %></h5>
-        <span><%= @reviews.count %> <%= @reviews.count > 1? "Reviews" : "Review" %></span>
+        <span id="average_rating"></span>
+        <p> <%= @reviews.count %> <%= @reviews.count > 1? "Reviews" : "Review" %></p>
         <hr>
         <%= @project.content %>
 
@@ -78,3 +79,11 @@
   </div>
 
 </div>
+
+<script>
+  $('#average_rating').raty({
+    path: '/assets',
+    readOnly: true,
+    score: <%= @project.average_rating %>
+  });
+</script>
