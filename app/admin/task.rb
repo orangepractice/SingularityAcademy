@@ -10,7 +10,7 @@ ActiveAdmin.register Task do
     actions
   end
 
-  index do
+  index do 
     selectable_column
     column :header
     column :title

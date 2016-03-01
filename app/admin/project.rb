@@ -16,7 +16,7 @@ ActiveAdmin.register Project do
     f.inputs do
       f.input :name
       f.input :content
-      f.input :price
+      f.input :price  
       f.input :image, hint: f.project.image? ? image_tag(project.image.url, height: '100') : content_tag(:span, "Upload JPG/PNG/GIF image")
     end
     f.actions
