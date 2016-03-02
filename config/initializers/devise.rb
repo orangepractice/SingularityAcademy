@@ -16,12 +16,11 @@ Devise.setup do |config|
   config.sign_out_via = :delete
 
   require 'omniauth-google-oauth2'
-  config.omniauth :google_oauth2, '263485746645-q4pi5fa5pk8h6gmn5l4l42g5uauk4h6p.apps.googleusercontent.com', '-KlhQy-60sRPorGDkiMdkm58', {access_type: "offline", approval_prompt: ""}
+  config.omniauth :google_oauth2, ENV['GOOGLE_APP_ID'], ENV['GOOGLE_APP_SECRET'], {access_type: "offline", approval_prompt: ""}
 
   require 'omniauth-facebook'
-  config.omniauth :facebook, 'YOUR_FACEBOOK_APP_ID', 'YOUR_FACEBOOK_APP_SECRET'
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET']
 
   require 'omniauth-github'
-  config.omniauth :github, 'YOUR_GITHUB_APP_ID', 'YOUR_GITHUB_APP_SECRET', scope: "user:email"
+  config.omniauth :github, ENV['GITHUB_APP_ID'], ENV['GITHUB_APP_SECRET'], scope: "user:email"
 end
-
