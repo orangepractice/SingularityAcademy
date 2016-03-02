@@ -33,6 +33,8 @@ gem 'friendly_id', '~> 5.1'
 
 gem 'active_admin-sortable_tree', '~> 0.2.1'
 
+gem 'stripe'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
