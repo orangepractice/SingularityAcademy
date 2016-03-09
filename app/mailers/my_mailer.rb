@@ -9,7 +9,7 @@ class MyMailer < ActionMailer::Base
     template_content = []
     message = {
       to: [{email: "#{user.email}"}],
-      subject: "Welcome to Code4Pro",
+      subject: "Welcome to SingularityAcademy",
       merge_vars: [
         {
           rcpt: user.email,
@@ -26,7 +26,7 @@ class MyMailer < ActionMailer::Base
     template_content = []
     message = {
       to: [{email: "#{user.email}"}],
-      subject: "Code4Pro - Your Receipt",
+      subject: "SingularityAcademy - Your Receipt",
       merge_vars: [
         {
           rcpt: user.email,

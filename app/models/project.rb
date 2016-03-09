@@ -17,7 +17,7 @@ class Project < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   def shortname
-    name.length > 25? name[0..25] + "..." : name
+    name.length > 15? name[0..15] + "..." : name
   end
 
   def average_rating
